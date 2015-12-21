@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configure xmlns="http://namespaces.zope.org/zope">
+
+    <adapter
+        provides=".interfaces.IHadoopGeneralInfo"
+        for=".HadoopGeneral.HadoopGeneral"
+        factory=".info.HadoopGeneralInfo"
+        />
+
+    <adapter
+        provides=".interfaces.IHadoopMemoryUsageInfo"
+        for=".HadoopMemoryUsage.HadoopMemoryUsage"
+        factory=".info.HadoopMemoryUsageInfo"
+        />
+
+    <adapter
+        provides=".interfaces.IHadoopSchedulerQueueInfo"
+        for=".HadoopSchedulerQueue.HadoopSchedulerQueue"
+        factory=".info.HadoopSchedulerQueueInfo"
+        />
+
+    <adapter
+        provides=".interfaces.IHadoopOozieJobStatusInfo"
+        for=".HadoopOozieJobStatus.HadoopOozieJobStatus"
+        factory=".info.HadoopOozieJobStatusInfo"
+        />
+
+    <include package=".browser"/>
+
+</configure>
+
